@@ -385,6 +385,49 @@ img { max-width: 100%; height: auto; display: block; }
     flex-shrink: 0;
 }
 
+/* === Clients / Opdrachtgevers === */
+.clients-header {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 3rem;
+}
+
+.clients-header h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(1.85rem, 3vw, 2.6rem);
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.7px;
+    line-height: 1.15;
+}
+
+.clients-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem 3rem;
+}
+
+.clients-grid img {
+    height: 40px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.55;
+    transition: filter 0.25s, opacity 0.25s;
+}
+
+.clients-grid img[src*="handelsbanken"] {
+    max-width: 90px;
+}
+
+.clients-grid img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
 /* === Contact === */
 #contact {
     background: var(--dark-2);
@@ -560,4 +603,8 @@ a.contact-item:hover {
     .hero-bg { background-attachment: scroll; }
 
     .contact-card { padding: 2rem 1.5rem; }
+
+    .clients-grid { gap: 1.75rem 2rem; }
+
+    .clients-grid img { height: 32px; }
 }
